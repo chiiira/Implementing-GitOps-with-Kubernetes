@@ -13,6 +13,8 @@ spec:
       labels:
         app: simple-webapp
     spec:
+      imagePullSecrets:
+        - name: registry-credentials
       containers:
         - image: "ghcr.io/la-cc/simple-webapp:1.0.1"
           name: simple-webapp
